@@ -1,10 +1,10 @@
 development:
   adapter: postgresql
-  database: demonstrate_bootstrap_development
+  database: starter_app_development
   pool: 5
   timeout: 5000
 test:
   adapter: postgresql
-  database: demonstrate_bootstrap_test
+  database: starter_app_test
   pool: 5
   timeout: 5000
