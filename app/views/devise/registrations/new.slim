@@ -1,0 +1,33 @@
+.row
+  .col-xs-0.col-md-2.col-lg-3
+  .col-xs-12.col-md-8.col-lg-6
+    h2 Sign up
+    =form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = devise_error_messages!
+      .input-group.input-group-lg
+        span.input-group-addon First Name
+        =f.text_field :first_name, autofocus: true, class: 'form-control', placeholder: 'First Name'
+      br
+      .input-group.input-group-lg
+        span.input-group-addon Last Name
+        = f.text_field :last_name, class: 'form-control', placeholder: 'Last Name'
+      br
+      .input-group.input-group-lg
+        span.input-group-addon Email Address
+        =f.email_field :email, class: 'form-control', placeholder: 'Email Address'
+      br
+      .input-group.input-group-lg id='password'
+        span.input-group-addon
+          'Password
+        =f.password_field :password, autocomplete: "off", class: 'form-control'
+      br
+      .input-group.input-group-lg id="password_confirmation"
+        span.input-group-addon
+          |Password Confirmation
+        =f.password_field :password, autocomplete: "off", class: 'form-control'
+      br
+      .actions
+        =f.submit 'Sign up'
+      br
+      =render 'devise/shared/links'
+  .col-xs-0.col-md-2.col-lg-3

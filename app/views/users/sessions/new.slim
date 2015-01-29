@@ -1,0 +1,22 @@
+.row
+  .col-xs-0.col-md-2.col-lg-3
+  .col-xs-12.col-md-8.col-lg-6
+    h2
+      |Sign in
+    =form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+      .input-group.input-group-lg
+        span.input-group-addon id="basic-addon1" Email
+        =f.email_field :email, autofocus: true, class: "form-control", placeholder: 'Email Address'
+      br
+      .input-group.input-group-lg id='password'
+        span.input-group-addon id="basic-addon1" Password
+        =f.password_field :password, autocomplete: "off", class: 'form-control'
+      br
+      -if devise_mapping.rememberable?
+        =f.check_box :remember_me
+        =f.label :remember_me, class: 'check-box-label-fix'
+      br
+      .actions
+        =f.submit "Sign in"
+      br
+    =render "devise/shared/links"
