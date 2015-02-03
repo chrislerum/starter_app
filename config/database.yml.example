@@ -1,10 +1,10 @@
 development:
   adapter: postgresql
-  database: starter_app_development
+  database: roamingdog_development
   pool: 5
   timeout: 5000
 test:
   adapter: postgresql
-  database: starter_app_test
+  database: roamingdog_test
   pool: 5
   timeout: 5000
