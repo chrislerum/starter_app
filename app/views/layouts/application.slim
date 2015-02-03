@@ -9,7 +9,7 @@ html
     nav.navbar.navbar-default.navbar-fixed-top.navbar-inverse
       .container-fluid
         .navbar-header
-          = link_to 'Home!', root_path, {class: 'navbar-brand'}
+          =link_to 'Roaming Dog', root_path, {class: 'navbar-brand'}
           button.navbar-toggle.collapsed type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
             span.sr-only Toggle navigation
             span.icon-bar
@@ -52,6 +52,7 @@ html
                   a href="#"
                     |Separated link
     .container
+      =image_tag 'roamingdog_logo.jpg', height: "50px"
       p.notice=notice
       p.alert=alert
       =yield
